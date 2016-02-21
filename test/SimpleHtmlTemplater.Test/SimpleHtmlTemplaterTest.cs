@@ -7,7 +7,7 @@ using FluentAssertions;
 
 namespace SimpleHtmlTemplater.Test
 {
-    public class SimpleHtmlTemplaterTest
+    public class TemplaterTest
     {
         [Fact]
         public void GeneratesHtmlWithoutModel()
@@ -31,13 +31,12 @@ namespace SimpleHtmlTemplater.Test
             var mockModelConverter = new Mock<IModelConverter>();
             mockModelConverter.Setup(m => m.Convert(model)).Returns(() =>
             {
-                var d = new Dictionary<string, string>
+                return new Dictionary<string, string>
                 {
                     {"Firstname", model.Firstname},
                     {"Lastname", model.Lastname},
                     {"Age", model.Age.ToString()}
                 };
-                return d;
             });
 
             var sut = new Templater(mockModelConverter.Object);
