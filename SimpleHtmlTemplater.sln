@@ -10,11 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleHtmlTemplater", "src\SimpleMailTemplater\SimpleHtmlTemplater.xproj", "{8C595088-6559-4323-9323-3466289A9B30}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{133285DE-E316-4534-8B4A-CAA3A56DAB44}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleHtmlTemplater.Test", "test\SimpleMailTemplater.Test\SimpleHtmlTemplater.Test.xproj", "{6739CD60-CC1F-4D34-B121-2279DE5EE956}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleHtmlTemplater", "src\SimpleHtmlTemplater\SimpleHtmlTemplater.xproj", "{8C595088-6559-4323-9323-3466289A9B30}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleHtmlTemplater.Test", "test\SimpleHtmlTemplater.Test\SimpleHtmlTemplater.Test.xproj", "{6739CD60-CC1F-4D34-B121-2279DE5EE956}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
