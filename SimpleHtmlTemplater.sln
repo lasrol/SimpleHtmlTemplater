@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DE4DF19F-6F2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72B8049C-649A-42DB-A6B8-EF1E6AEED4C4}"
 	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
 		global.json = global.json
 		Patch-ProjectJson.ps1 = Patch-ProjectJson.ps1
 	EndProjectSection
