@@ -13,7 +13,7 @@ namespace SimpleHtmlTemplater.Test
         public void GeneratesHtmlWithoutModel()
         {
             var mockModelConverter = new Mock<IModelConverter>();
-            var sut = new SimpleHtmlTemplater(mockModelConverter.Object);
+            var sut = new Templater(mockModelConverter.Object);
 
             var result = sut.AddTemplate("<div>This is a test</div>")
                             .AddTemplate("<div>new row</div>")
@@ -40,7 +40,7 @@ namespace SimpleHtmlTemplater.Test
                 return d;
             });
 
-            var sut = new SimpleHtmlTemplater(mockModelConverter.Object);
+            var sut = new Templater(mockModelConverter.Object);
 
             var result = sut.AddTemplate("<div>This {Firstname} is a test</div>", model)
                             .AddTemplate("<div>{Lastname} and {Age} has new row</div>", model)

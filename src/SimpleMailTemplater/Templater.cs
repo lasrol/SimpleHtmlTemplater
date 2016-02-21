@@ -3,35 +3,35 @@ using System.Text;
 
 namespace SimpleHtmlTemplater
 {
-    public class SimpleHtmlTemplater 
+    public class Templater : ITemplater
     {
         private readonly IModelConverter _modelConverter;
         private readonly StringBuilder _htmlContent = new StringBuilder();
 
-        public SimpleHtmlTemplater(IModelConverter modelConverter)
+        public Templater(IModelConverter modelConverter)
         {
             _modelConverter = modelConverter;
         }
 
-        public SimpleHtmlTemplater AddTemplate(string content)
+        public ITemplater AddTemplate(string content)
         {
             _htmlContent.Append(content);
             return this;
         }
 
-        public SimpleHtmlTemplater AddTemplateFromFile(string path)
+        public ITemplater AddTemplateFromFile(string path)
         {
             AddTemplate(Readfile(path));
             return this;
         }
 
-        public SimpleHtmlTemplater AddTemplateFromFile(string path, object model)
+        public ITemplater AddTemplateFromFile(string path, object model)
         {
             AddTemplate(Readfile(path), model);
             return this;
         }
 
-        public SimpleHtmlTemplater AddTemplate(string content, object model)
+        public ITemplater AddTemplate(string content, object model)
         {
             var templateHtml = content;
             var dictonary = _modelConverter.Convert(model);
